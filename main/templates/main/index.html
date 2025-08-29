@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}главная стриница{% endblock %}
+
+
+{% block penes %}
+
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+
+<article id="article-main">
+    <div id="art1">
+        <h1>Intro</h1>
+        <p>There's supose to be some information about me</p>
+    </div>
+    <div id="art2">
+
+        <img src="{% static 'main/img/cyberpunk2077.png' %}" alt="" id="intro-img" >
+    </div>
+</article>
+
+{% endblock %}

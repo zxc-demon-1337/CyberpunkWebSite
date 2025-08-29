@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'main/img/favicon.ico' %}"/>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+</head>
+<body>
+    <aside>
+        <!-- <img src="{% static 'main/img/logo.svg' %}" alt="" id="logo-img"> -->
+        <svg width="75" height="74" viewBox="0 0 75 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36.9999 42L55 74H48L36.9999 53L26 74H19L36.9999 42Z"/>
+            <path d="M36.9999 32L55 0H48L36.9999 21L26 0H19L36.9999 32Z"/>
+            <path d="M43 36.9999L75 55V48L54 36.9999L75 26V19L43 36.9999Z"/>
+            <path d="M32 37.0001L0 19V26L21 37.0001L0 48V55L32 37.0001Z"/>
+            <path d="M15 54H23V59H10V49.375L15 46.5625V54ZM64 48.8125V59H51V54H59V46L64 48.8125ZM64 25.1875L59 28V19H51V14H64V25.1875ZM23 19H15V27.4375L10 24.625V14H23V19Z"/>
+        </svg>
+        <div id="links">
+            <div class="account">
+                <hr class="line">
+                <a id="link_account" class="links" href="{% url 'account' %}">
+                    {% if user.is_authenticated %}
+                        {{ user.username }}
+                    {% else %}
+                        Account
+                    {% endif %}
+                </a>
+                <hr class="line">                
+            </div>
+            <a id="link_home", class="links" href="{% url 'home' %}">Home</a>
+            <a id="link_about", class="links" href="{% url 'about' %}">About us</a>
+            <a id="link_contacts", class="links" href="">Contacts</a>
+            <a id="link_test", class="links" href="{% url 'test' %}">Test</a>
+            <a id="link_link5", class="links" href="{% url 'create' %}">link5</a>
+        </div>
+    </aside>
+    {% block penes %}
+
+    {% endblock %}
+</body>
+</html>

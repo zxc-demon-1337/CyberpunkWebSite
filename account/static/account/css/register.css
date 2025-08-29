@@ -1,0 +1,103 @@
+:root{
+    --links-color: red;
+    --text-color: #c00000;
+    --bg-color: #212121;
+    --header-color: #200303;
+    --article-color: rgb(14, 14, 14);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    gap: 30px;
+
+    /* background-color: blue; */
+
+    h1{
+        font-size: 60px;
+    }
+}
+
+.intro{
+    margin: 0 20px;
+}
+
+input[type="text"] {
+  font-family: inherit; /* 1 */
+  font-size: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+#registration-page-link{
+    font-weight: bold;
+}
+
+label{
+    display: block;
+    margin-bottom: 0px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 16px;
+}
+
+
+input {
+  all: unset;
+}
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+  border: 1px solid red;
+  background: var(--bg-color);
+  outline: none;
+  color: #c00000;
+  padding: 6px
+} */
+
+input{
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  background: var(--bg-color);
+  outline: none;
+  color: #c00000;
+  padding: 6px;
+}
+button{
+    height: 30px;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: scale .3s ease;
+    scale: 1;
+}
+
+button:hover{
+    transition: scale .3s ease;
+    scale: 1.05;
+}
+
+

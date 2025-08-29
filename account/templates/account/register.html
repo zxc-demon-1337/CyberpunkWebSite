@@ -1,0 +1,36 @@
+<!-- templates/register.html -->
+
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block penes %}
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+
+<article>
+  <h1 class="intro">Регистрация</h1>
+  <form method="post">
+    {% csrf_token %}
+    <p>
+      <label class="text" for="id_username">Username</label> <br>
+      {{ form.username }}
+    </p>
+    <p>
+      <label class="text" for="id_email">Email</label>
+      {{ form.email }}
+    </p>
+    <p>
+      <label class="text" for="id_password1">Password</label>
+      {{ form.password1 }}
+    </p>
+    <p class="text">
+      <label class="text" for="id_password2">Confirm password</label>
+      {{ form.password2 }}
+    </p>
+    <span>{{ error }}</span>
+    <button type="submit">Register</button>
+  </form>
+  <p class="text">Уже есть аккаунт? Ну так <a class="text" id="registration-page-link" href="{% url 'login' %}">Войди</a> в него блять</p>
+
+</article>
+{% endblock %}

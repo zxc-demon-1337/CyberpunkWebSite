@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Новости о сайте{% endblock %}
+
+
+{% block penes %}
+
+
+
+<article>
+    <div id="art1">
+        <h1>Новости о сайте</h1>
+
+        {% if news %}
+            {% for el in news %}
+                <div class="alert  alert-warning">
+                    <p>
+                        {{ el.title }}<br>
+                        {{ el.anons }}<br>
+                        {{ el.full_text }}<br>
+                        {{ el.date }}<br>
+                    </p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>Записей нэма</h1>
+        {% endif %}
+        {# это комментарий #}
+</article>
+
+{% endblock %}
