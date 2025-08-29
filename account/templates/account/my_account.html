@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}главная стриница{% endblock %}
+
+{% block penes %}
+<link rel="stylesheet" href="{% static 'css/account_home.css'%}">
+
+    <article>
+        <main>
+            <h1 class="text">Здарова, <span class="text">{{ user.username }}</span></h1>
+            <hr class="line" id="id-hr">
+            <div class="acc-links">
+                <a id="my-products" class="acc-link" href="{% url 'my_products' %}">Your publications</a>
+                <a id="add-products" href="{% url 'add_product' %}" class="acc-link">Add publication</a>
+                <a id="admin-panel" href="" class="acc-link"></a>
+                <a class="acc-link" href="{% url 'logout' %}" type="button">logout</a>
+            </div>
+        </main>
+    </article>
+
+
+{% endblock %}
