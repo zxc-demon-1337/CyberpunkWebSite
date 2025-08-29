@@ -1,0 +1,170 @@
+:root{
+    --links-color: red;
+    --text-color: #c00000;
+    --bg-color: #212121;
+    --header-color: #200303;
+    --article-color: rgb(14, 14, 14);
+}
+
+@font-face {
+  font-family: 'Cyberpunk';
+  src: url('../fonts/Cyberpunk_RUS_BY_LYAJKA.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: url('../fonts/ShareTechMonoRegular.otf'),
+}
+
+*{
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    font-family: 'ShareTechMono';
+}
+
+.text{
+    color: var(--text-color);
+    font-family: 'ShareTechMono';
+}
+
+.intro{
+    color: var(--text-color);
+    font-family: 'Cyberpunk';
+}
+
+html, body{
+    height: 100%;
+}
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 8px;
+
+    gap: 8px;
+
+    box-sizing: border-box;
+
+}
+
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+
+    width: 10%;
+    height: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--header-color);
+    padding: 10px 10px;
+    /* gap: 30px; */
+
+    svg{    
+
+        height: 50px;
+        width: 50px;
+
+        fill: var(--links-color);
+
+    }
+
+    box-shadow: red 0px 0px 100px;
+
+    #links{
+
+        display: flex;
+        flex-direction: column;
+        /* margin-right: 20px; */
+        width: 100%;
+        gap: 20px;
+
+        /* margin-top:30px; */
+        text-align: center;
+
+        a{
+            color: var(--links-color); 
+            scale: 1;
+            transition: scale .1s ease;
+        }
+        a:hover{
+            scale: 1.1;
+            transition: scale .1s ease;
+        }
+    }
+} 
+article{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    background-color: var(--article-color);
+    /* height: fit-content; */
+    width: 90%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    #art1{
+        color: var(--text-color);
+
+        h1{
+            font-family: 'Cyberpunk';
+            font-size: 48px;
+        }
+    }
+
+    #art2{
+
+        display: flex;
+        
+    }
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--links-color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    font-family: 'ShareTechMono' !important;
+    transition: all 5000s ease-in-out 0s;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    background: var(--bg-color) !important;
+    outline: none;
+    color: var(--text-color) !important;
+    padding: 6px;
+}
+
+
+#form-add-product{
+    width: 400px;
+}
+
+input[type='text'], input[type='password'], input[type='file'], button, textarea{
+    background-color: var(--article-color);
+}
